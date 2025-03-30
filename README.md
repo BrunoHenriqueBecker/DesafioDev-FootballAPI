@@ -1,54 +1,59 @@
-# React + TypeScript + Vite
+Desafio Dev's O2projetos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O que é
 
-Currently, two official plugins are available:
+Este projeto consome a API football-data.org para listar competições de futebol e seus respectivos clubes participantes. Ele foi desenvolvido em React e utiliza Vite para um ambiente de desenvolvimento rápido e eficiente.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Como rodar
 
-## Expanding the ESLint configuration
+Pré-requisitos
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Node.js instalado (versão 16+ recomendada)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Gerenciador de pacotes npm ou yarn
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Passos para executar o projeto
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Clone o repositório:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+git clone https://github.com/BrunoHenriqueBecker/DesafioDev-FootballAPI
+
+Entre na pasta do projeto:
+
+cd DesafioDev-FootballAPI
+
+Instale as dependências:
+
+npm install
+# ou com yarn
+yarn install
+
+Configure as variáveis de ambiente:
+Crie um arquivo .env na raiz do projeto e adicione sua chave da API:
+
+VITE_API_KEY=  c710e33b71fe486c949abef77404ed69
+
+Inicie o projeto:
+
+npm run dev
+# ou com yarn
+yarn dev
+
+Acesse no navegador:
+
+http://localhost:5173
+
+Print do projeto
+
+
+
+Próximos passos (Opcional)
+
+Melhorar a experiência do usuário ao exibir os clubes
+
+Implementar paginação para competições e clubes
+
+Adicionar um modo escuro
+
+Criar testes automatizados
+
